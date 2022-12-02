@@ -1,0 +1,41 @@
+package py.edu.uc.lp3.domain;
+
+public class Usuario {
+	int id;
+	String userName;
+	String userEmail;
+	String hash;
+	int idOrganizacion;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getUserEmail() {
+		return userEmail;
+	}
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
+	}
+	public String getHash() {
+		return hash;
+	}
+	public void setHash(String hash) {
+		this.hash = hash;
+	}
+	public int getIdOrganizacion() {
+		return idOrganizacion;
+	}
+	public void setIdOrganizacion(int idOrganizacion) {
+		this.idOrganizacion = idOrganizacion;
+	}
+	
+}
