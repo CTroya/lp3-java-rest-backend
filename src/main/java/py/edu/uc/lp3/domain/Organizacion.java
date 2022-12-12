@@ -1,15 +1,38 @@
 package py.edu.uc.lp3.domain;
 
+import javax.persistence.*;
+
+@Entity
 public class Organizacion {
-	int id;
+	@Id
+	//Crea una primary key en la base de datos.
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	Long id;
 	String nombre;
 	String tipo;
 	String ubicacion;
 	int telefono;
-	public int getId() {
+	protected Organizacion() {
+		
+	}
+	public Organizacion(Long id, String nombre, String tipo, String ubicacion, int telefono) {
+		this.id = id;
+		this.nombre = nombre;
+		this.tipo = tipo;
+		this.ubicacion = ubicacion;
+		this.telefono = telefono;
+	}
+	
+	public Organizacion(String nombre, String tipo, String ubicacion, int telefono) {
+		this.nombre = nombre;
+		this.tipo = tipo;
+		this.ubicacion = ubicacion;
+		this.telefono = telefono;
+	}
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNombre() {
@@ -36,4 +59,10 @@ public class Organizacion {
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
+	@Override
+	public String toString() {
+		return "Organizacion [id=" + id + ", nombre=" + nombre + ", tipo=" + tipo + ", ubicacion=" + ubicacion
+				+ ", telefono=" + telefono + "]";
+	}
+	
 }

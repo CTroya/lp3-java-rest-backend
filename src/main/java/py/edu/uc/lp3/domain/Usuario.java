@@ -6,6 +6,7 @@ public class Usuario {
 	String userEmail;
 	String hash;
 	int idOrganizacion;
+	String rol;
 	
 	public int getId() {
 		return id;
@@ -37,5 +38,10 @@ public class Usuario {
 	public void setIdOrganizacion(int idOrganizacion) {
 		this.idOrganizacion = idOrganizacion;
 	}
-	
+	public String getRol() {
+		return rol;
+	}
+	public void setRol(String rol) {
+		this.rol = rol;
+	}
 }
