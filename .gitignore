@@ -24,3 +24,5 @@ hs_err_pid*
 
 #Base de datos modificaciones
 h2db.*
+ 
+pom.properties
