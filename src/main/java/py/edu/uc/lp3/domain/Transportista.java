@@ -5,7 +5,6 @@ public class Transportista extends Usuario {
 	String ubicacion;
 	int idAlmacen;
 	int idTransporte;
-	
 	public String getContratante() {
 		return contratante;
 	}
@@ -30,5 +29,4 @@ public class Transportista extends Usuario {
 	public void setIdTransporte(int idTransporte) {
 		this.idTransporte = idTransporte;
 	}
-	
 }

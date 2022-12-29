@@ -1,14 +1,22 @@
 package py.edu.uc.lp3.domain;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.*;
+@Entity
 public class Usuario {
-	int id;
+	@Id
+	//Crea una primary key en la base de datos.
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	long id;
 	String userName;
 	String userEmail;
 	String hash;
 	int idOrganizacion;
 	String rol;
 	
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 	public void setId(int id) {

@@ -21,7 +21,7 @@ public interface UsuarioService{
 	public Auditor crearAuditor(Auditor auditor);
 	public Auditor actualizarAuditor(Auditor auditor);
 	
-	public void eliminarUsuario(int id);
+	public void eliminarUsuario(long id);
 	
 	public ArrayList<Usuario> listarUsuarios();
 }
