@@ -7,11 +7,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import py.edu.uc.lp3.constants.ApiPaths;
 import py.edu.uc.lp3.domain.Impuesto;
 import py.edu.uc.lp3.service.ImpuestoService;
 
 @RestController
-@RequestMapping(path="/impuesto")
+@RequestMapping(ApiPaths.IMPUESTO)
 public class ImpuestoController {
 	@Autowired
 	private ImpuestoService impuestoService;

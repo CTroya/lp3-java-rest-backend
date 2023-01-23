@@ -11,11 +11,11 @@ public class Organizacion {
 	String nombre;
 	String tipo;
 	String ubicacion;
-	int telefono;
+	String telefono;
 	protected Organizacion() {
 		
 	}
-	public Organizacion(Long id, String nombre, String tipo, String ubicacion, int telefono) {
+	public Organizacion(Long id, String nombre, String tipo, String ubicacion, String telefono) {
 		this.id = id;
 		this.nombre = nombre;
 		this.tipo = tipo;
@@ -23,7 +23,7 @@ public class Organizacion {
 		this.telefono = telefono;
 	}
 	
-	public Organizacion(String nombre, String tipo, String ubicacion, int telefono) {
+	public Organizacion(String nombre, String tipo, String ubicacion, String telefono) {
 		this.nombre = nombre;
 		this.tipo = tipo;
 		this.ubicacion = ubicacion;
@@ -53,10 +53,10 @@ public class Organizacion {
 	public void setUbicacion(String ubicacion) {
 		this.ubicacion = ubicacion;
 	}
-	public int getTelefono() {
+	public String getTelefono() {
 		return telefono;
 	}
-	public void setTelefono(int telefono) {
+	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 	@Override

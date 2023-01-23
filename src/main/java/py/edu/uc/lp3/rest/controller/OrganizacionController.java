@@ -1,14 +1,15 @@
 package py.edu.uc.lp3.rest.controller;
 
 import java.util.ArrayList;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import py.edu.uc.lp3.constants.ApiPaths;
 import py.edu.uc.lp3.domain.Organizacion;
+import py.edu.uc.lp3.exceptions.OrganizacionException;
 import py.edu.uc.lp3.service.OrganizacionService;
 
 @RestController
-@RequestMapping(path="/organizacion")
+@RequestMapping(ApiPaths.ORGANIZACION)
 public class OrganizacionController {
 	@Autowired
 	private OrganizacionService organizacionService;
@@ -29,7 +30,7 @@ public class OrganizacionController {
         return organizacionService.actualizarOrganizacion(organizacion);
     }
 	@RequestMapping(value="/{organizacionId}",method=RequestMethod.DELETE)
-    public void delete(@PathVariable Long organizacionId) {
-        organizacionService.eliminarOrganizacion(organizacionId);
+    public void delete(@PathVariable Long organizacionId) throws OrganizacionException {
+		organizacionService.eliminarOrganizacion(organizacionId);
     }
 }
