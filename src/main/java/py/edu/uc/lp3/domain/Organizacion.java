@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Organizacion {
 	@Id
 	//Crea una primary key en la base de datos.
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	Long id;
 	String nombre;
 	String tipo;
