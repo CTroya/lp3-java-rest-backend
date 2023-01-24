@@ -37,13 +37,14 @@ public class UsuarioController {
         return usuarioService.listarUsuarios();
     }
 	@RequestMapping(method=RequestMethod.PUT,path="/usuario/administrador")
-	public Administrador update(Administrador administrador) {
+	public Administrador update(@RequestBody Administrador administrador) {
 		return usuarioService.actualizarAdministrador(administrador);
 	}
-	public Despachante update(Despachante despachante) {
+	@RequestMapping(method=RequestMethod.PUT,path="/usuario/despachante")
+	public Despachante update(@RequestBody Despachante despachante) {
 		return usuarioService.actualizarDespachante(despachante);
 	}
-	@RequestMapping(method=RequestMethod.DELETE)
+	@RequestMapping(value="/usuario/{usuarioId}",method=RequestMethod.DELETE)
 	public void delete(@PathVariable Long usuarioId) {
 		usuarioService.eliminarUsuario(usuarioId);
 	}

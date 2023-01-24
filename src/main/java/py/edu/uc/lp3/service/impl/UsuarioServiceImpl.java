@@ -45,32 +45,48 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 	@Override
 	public Despachante actualizarDespachante(Despachante despachante){
-		
-		return despachante;
+		Optional <Usuario> usrBD=usuarioRepository.findById(despachante.getId());
+		System.out.print(despachante.getId());
+		if(usrBD.isPresent()) {
+			return usuarioRepository.save(despachante);
+		}
+		return null;
 	}
 	@Override
 	public Transportista crearTransportista(Transportista transportista){
-		
+		Optional<Usuario> usrBD=usuarioRepository.findById(transportista.getId());
+		if(usrBD.isEmpty()) {
+			return usuarioRepository.save(transportista);
+		}
 		return transportista;
 	}
 	@Override
 	public Transportista actualizarTransportista(Transportista transportista){
-		
+		Optional<Usuario> usrBD=usuarioRepository.findById(transportista.getId());
+		if(usrBD.isPresent()) {
+			return usuarioRepository.save(transportista);
+		}
 		return transportista;
 	}
 	@Override
 	public Auditor crearAuditor(Auditor auditor){
-		
+		Optional <Usuario> usrBD=usuarioRepository.findById(auditor.getId());
+		if(usrBD.isEmpty()) {
+			return usuarioRepository.save(auditor);
+		}
 		return auditor;
 	}
 	@Override
 	public Auditor actualizarAuditor(Auditor auditor){
-		
-		return auditor;
+		Optional <Usuario> usrBD=usuarioRepository.findById(auditor.getId());
+		if(usrBD.isPresent()) {
+			return usuarioRepository.save(auditor);
+		}
+		return null;
 	}
 	@Override
 	public void eliminarUsuario(long id){
-		
+		usuarioRepository.deleteById(id);
 	}
 	@Override
 	public ArrayList<Usuario> listarUsuarios(){
