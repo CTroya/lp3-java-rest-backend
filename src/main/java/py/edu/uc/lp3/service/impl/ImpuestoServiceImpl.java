@@ -27,7 +27,6 @@ public class ImpuestoServiceImpl implements ImpuestoService {
 
 	@Override
 	public Impuesto actualizarImpuesto(Impuesto impuesto) {
-		System.out.print("PILINEEEEES\n");
 		Optional<Impuesto> impBD=impuestoRepository.findById(impuesto.getId());
 		if(impBD.isPresent()) {
 			return impuestoRepository.save(impuesto);
