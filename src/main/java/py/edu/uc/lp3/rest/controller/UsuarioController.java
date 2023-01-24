@@ -24,11 +24,15 @@ public class UsuarioController {
 	public Despachante save(@RequestBody Despachante despachante) {
 		return usuarioService.crearDespachante(despachante);
 	}
-	@RequestMapping(value="/usuario/auditor")
+	@RequestMapping(method=RequestMethod.POST,value="/usuario/auditor")
 	public Auditor save(@RequestBody Auditor auditor) {
 		return usuarioService.crearAuditor(auditor);
 	}
-	@RequestMapping(value="/usuario/transportista")
+	@RequestMapping(method=RequestMethod.PUT, value="/usuario/auditor")
+	public Auditor update(@RequestBody Auditor auditor) {
+		return usuarioService.actualizarAuditor(auditor);
+	}
+	@RequestMapping(method=RequestMethod.POST,value="/usuario/transportista")
 	public Transportista save(@RequestBody Transportista transportista) {
 		return usuarioService.crearTransportista(transportista);
 	}
