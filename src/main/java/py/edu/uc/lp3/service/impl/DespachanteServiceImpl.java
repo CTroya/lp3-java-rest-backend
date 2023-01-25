@@ -34,11 +34,17 @@ public class DespachanteServiceImpl implements DespachanteService {
 
     @Override
     public Pedido cargarDato(ArrayList<Producto> productos,Long pedidoIdLong) {
+        System.out.print("PILINES\n");
         Optional<Pedido> reqBD = pedidoRepository.findById(pedidoIdLong);
         if(reqBD.isPresent()){
             Pedido pedido = reqBD.get();
-            productos.addAll(pedido.getProducto().getProductosGuardados());
-            pedido.getProducto().setProductosGuardados(productos);
+            if(pedido.getProducto() != null){
+                productos.addAll(pedido.getProducto().getProductosGuardados());
+                pedido.getProducto().setProductosGuardados(productos);
+            }else{
+                //pedido.getProducto().productosGuardados = new ArrayList<Producto>();
+                pedido.addAlmacenamiento(productos);
+            }
             return pedido;
         }
         return null;

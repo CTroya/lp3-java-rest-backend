@@ -17,7 +17,6 @@ import py.edu.uc.lp3.domain.Producto;
 import py.edu.uc.lp3.service.DespachanteService;
 
 @RestController
-@RequestMapping(ApiPaths.DESPACHANTE)
 public class DespachanteController {
     @Autowired
     private DespachanteService despachanteService;
@@ -25,8 +24,8 @@ public class DespachanteController {
     public float generarPresupuesto() {
         return 0;
     }
-    @RequestMapping(value="/cargarDato/{AlmacenamientoId}",method=RequestMethod.POST)
-    public Pedido cargarDato(@PathVariable Long Id,@RequestBody ArrayList<Producto> productos){
+    @RequestMapping(value="/despachante/cargarDato/{Id}",method=RequestMethod.POST)
+    public Pedido cargarDato(@PathVariable Long Id, ArrayList<Producto> productos){
         return despachanteService.cargarDato(productos,Id);
     }
     

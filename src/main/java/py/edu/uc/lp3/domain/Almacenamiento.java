@@ -10,7 +10,7 @@ public class Almacenamiento extends itemFacturable {
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	long Id;
 	float capacidad;
-	ArrayList<Producto> productosGuardados;
+	public ArrayList<Producto> productosGuardados;
 	public float getCapacidad() {
 		return capacidad;
 	}
@@ -23,5 +23,4 @@ public class Almacenamiento extends itemFacturable {
 	public void setProductosGuardados(ArrayList<Producto> productosGuardados) {
 		this.productosGuardados = productosGuardados;
 	}
-	
 }
