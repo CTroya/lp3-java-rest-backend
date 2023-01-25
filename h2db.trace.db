@@ -58,3 +58,6 @@ SELECT Indexes FROM IMPUESTO [42122-214]
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-25 11:59:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM ALMACENAMIENTO ID [*]IMPUESTO ORGANIZACION"; SQL statement:
+SELECT * FROM ALMACENAMIENTO ID IMPUESTO ORGANIZACION [42000-214]

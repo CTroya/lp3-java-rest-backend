@@ -14,8 +14,8 @@ public class DespachanteController {
     @Autowired
     //private DespachanteService despachanteService;
     @RequestMapping(value="/generarPresupuesto", method=RequestMethod.GET)
-    public ArrayList<Producto> generarPresupuesto() {
-        return null;
+    public float generarPresupuesto() {
+        return 0;
     }
     
     

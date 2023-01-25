@@ -4,12 +4,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 @Entity
 public class Pedido {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	long id;
-	Almacenamiento Producto;
+	@OneToOne
+	Almacenamiento productosATransportar;
 	public long getId() {
 		return id;
 	}
@@ -17,10 +19,10 @@ public class Pedido {
 		this.id = id;
 	}
 	public Almacenamiento getProducto() {
-		return Producto;
+		return productosATransportar;
 	}
 	public void setProducto(Almacenamiento producto) {
-		Producto = producto;
+		productosATransportar = producto;
 	}
 	
 }

@@ -3,7 +3,6 @@ package py.edu.uc.lp3.domain;
 import javax.persistence.Id;
 
 public class itemFacturable {
-	@Id
 	long id;
 	String nombre;
 	String tipo;
