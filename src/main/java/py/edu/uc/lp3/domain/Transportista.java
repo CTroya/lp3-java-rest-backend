@@ -10,7 +10,6 @@ public class Transportista extends Usuario {
 	String ubicacion;
 	int idAlmacen;
 	int idTransporte;
-	ArrayList<Pedido> Pedidos; 
 	public String getContratante() {
 		return contratante;
 	}

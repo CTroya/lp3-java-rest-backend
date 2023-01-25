@@ -1,5 +1,8 @@
 package py.edu.uc.lp3.domain;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Producto extends itemFacturable{
 	int cantidad;
 	String procedencia;
