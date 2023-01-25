@@ -1,6 +1,14 @@
 #FileLock
+<<<<<<< HEAD
 #Wed Jan 25 17:33:39 PYST 2023
 server=25.4.193.124\:49417
 hostName=DESKTOP-THIT320
 method=file
 id=185ea72434f209f7fe18ba50acc49abf14d134386a8
+=======
+#Wed Jan 25 17:13:09 PYST 2023
+server=192.168.56.1\:58319
+hostName=DESKTOP-TFIOP3I
+method=file
+id=185ea9003d05f94686205da679c991f7543c9d080b5
+>>>>>>> 8cae1489ab63785629fea6f127cd48b0c1e9697c

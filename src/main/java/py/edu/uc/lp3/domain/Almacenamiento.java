@@ -6,9 +6,6 @@ import javax.persistence.*;
 
 @Entity
 public class Almacenamiento extends itemFacturable {
-	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO)
-	long Id;
 	float capacidad;
 	public ArrayList<Producto> productosGuardados;
 	public float getCapacidad() {
