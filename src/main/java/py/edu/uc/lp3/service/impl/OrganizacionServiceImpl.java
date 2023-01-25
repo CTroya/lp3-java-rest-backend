@@ -19,18 +19,16 @@ public class OrganizacionServiceImpl implements OrganizacionService {
 		Optional<Organizacion> orgBD=organizacionRepository.findById(organizacion.getId());
 		if(orgBD.isEmpty()) {
 			return organizacionRepository.save(organizacion);
-		}else {
-			return null;
 		}
+		return null;
 	}
 	@Override
 	public Organizacion actualizarOrganizacion(Organizacion organizacion) {
 		Optional<Organizacion> orgBD=organizacionRepository.findById(organizacion.getId());
 		if(orgBD.isPresent()) {
 			return organizacionRepository.save(organizacion);
-		}else {
-			return null;
 		}
+		return null;
 		
 	}
 	@Override
