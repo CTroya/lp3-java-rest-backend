@@ -1,12 +1,15 @@
 package py.edu.uc.lp3.domain;
 
+import javax.persistence.Id;
+
 public class itemFacturable {
-	int id;
+	@Id
+	long id;
 	String nombre;
 	String tipo;
 	String descripcion;
 	float precio;
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 	public void setId(int id) {

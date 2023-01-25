@@ -1,8 +1,14 @@
 package py.edu.uc.lp3.domain;
 
 import java.util.ArrayList;
+import javax.persistence.*;
 
+
+@Entity
 public class Almacenamiento extends itemFacturable {
+	@Id
+	@GeneratedValue(strategy= GenerationType.AUTO)
+	long Id;
 	float capacidad;
 	ArrayList<Producto> productosGuardados;
 	public float getCapacidad() {

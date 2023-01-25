@@ -18,11 +18,6 @@ public class DespachanteServiceImpl implements DespachanteService {
     @Override
     public ArrayList<Producto> generarPresupuesto(Pedido pedido) {
         // TODO Auto-generated method stub
-        Optional <Pedido> reqBD = pedidoRepository.findById(pedido.getId());
-        if(reqBD.isPresent()){
-            Pedido reqObj = reqBD.get();
-            System.out.print(reqObj);
-        }
         return null;
     }
 
