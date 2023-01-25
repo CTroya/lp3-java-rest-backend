@@ -1,6 +1,6 @@
 package py.edu.uc.lp3.domain;
 
-import javax.persistence.Id;
+//import javax.persistence.Id;
 
 public class itemFacturable {
 	long id;

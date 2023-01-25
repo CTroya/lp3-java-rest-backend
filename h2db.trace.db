@@ -61,3 +61,6 @@ SELECT Indexes FROM IMPUESTO [42122-214]
 2023-01-25 11:59:00 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM ALMACENAMIENTO ID [*]IMPUESTO ORGANIZACION"; SQL statement:
 SELECT * FROM ALMACENAMIENTO ID IMPUESTO ORGANIZACION [42000-214]
+2023-01-25 14:45:24 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]ALMACENAMIENTO"; expected "ALTER, ANALYZE"; SQL statement:
+ALMACENAMIENTO [42001-214]
