@@ -52,4 +52,8 @@ public class UsuarioController {
 	public void delete(@PathVariable Long usuarioId) {
 		usuarioService.eliminarUsuario(usuarioId);
 	}
+	@RequestMapping(method=RequestMethod.GET , value="/usuario/{usuarioRol}")
+    public ArrayList<Usuario> findByRoll(@PathVariable String usuarioRol) {
+        return usuarioService.listarUsuariosPorRol(usuarioRol);
+    }
 }
