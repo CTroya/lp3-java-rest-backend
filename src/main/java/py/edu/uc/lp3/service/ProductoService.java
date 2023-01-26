@@ -10,4 +10,5 @@ public interface ProductoService {
 	public void eliminarProducto(Long Id);
 	public ArrayList<Producto> listarProductos();
 	public ArrayList<Producto> listarProductosPorId(long Id);
+	public ArrayList<Producto> generarPresupuesto(long almacenamientoId);
 }

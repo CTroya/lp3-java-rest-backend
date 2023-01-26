@@ -52,4 +52,12 @@ public class ProductoServiceImpl implements ProductoService {
 		}
 		return bruh;
 	}
+	@Override
+	public ArrayList<Producto> generarPresupuesto(long almacenamientoId) {
+		ArrayList<Producto> listaItems = listarProductosPorId(almacenamientoId);
+		/*
+		 * PrecioProducto+HonorarioDespachante+ImpuestoG
+		 */
+		return null;
+	}
 }
