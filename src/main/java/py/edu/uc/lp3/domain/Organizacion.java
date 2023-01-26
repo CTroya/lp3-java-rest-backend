@@ -42,10 +42,4 @@ public class Organizacion {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-	@Override
-	public String toString() {
-		return "Organizacion [id=" + id + ", nombre=" + nombre + ", tipo=" + tipo + ", ubicacion=" + ubicacion
-				+ ", telefono=" + telefono + "]";
-	}
-	
 }

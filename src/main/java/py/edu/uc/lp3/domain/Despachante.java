@@ -7,7 +7,6 @@ public class Despachante extends Usuario{
 	float honorarios;
 	public Despachante() {
 		super();
-		this.rol="DESPACHANTE";
 	}
 	public float getHonorarios() {
 		return honorarios;

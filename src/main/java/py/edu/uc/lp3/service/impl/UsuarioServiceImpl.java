@@ -21,6 +21,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 	UsuarioRepository usuarioRepository;
 	@Override
 	public Administrador crearAdministrador(Administrador administrador){
+		administrador.setRol("ADMINISTRADOR");
 		Optional <Usuario> usrBD=usuarioRepository.findById(administrador.getId());
 		if(usrBD.isEmpty()) {
 			return usuarioRepository.save(administrador);
@@ -29,14 +30,15 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 	@Override
 	public Administrador actualizarAdministrador(Administrador administrador){
-		Optional <Usuario> usrBD=usuarioRepository.findById(administrador.getId());
-		if(usrBD.isPresent()) {
+		Optional<Usuario> usrBD=usuarioRepository.findById(administrador.getId());
+		if(usrBD.isPresent() && administrador.getRol()=="ADMINISTRADOR") {
 			return usuarioRepository.save(administrador);
 		}
 		return null;
 	}
 	@Override
 	public Despachante crearDespachante(Despachante despachante){
+		despachante.setRol("DESPACHANTE");
 		Optional <Usuario> usrBD=usuarioRepository.findById(despachante.getId());
 		if(usrBD.isEmpty()) {
 			return usuarioRepository.save(despachante);
@@ -47,13 +49,14 @@ public class UsuarioServiceImpl implements UsuarioService {
 	public Despachante actualizarDespachante(Despachante despachante){
 		Optional <Usuario> usrBD=usuarioRepository.findById(despachante.getId());
 		System.out.print(despachante.getId());
-		if(usrBD.isPresent()) {
+		if(usrBD.isPresent() && despachante.getRol()=="DESPACHANTE") {
 			return usuarioRepository.save(despachante);
 		}
 		return null;
 	}
 	@Override
 	public Transportista crearTransportista(Transportista transportista){
+		transportista.setRol("TRANSPORTISTA");
 		Optional<Usuario> usrBD=usuarioRepository.findById(transportista.getId());
 		if(usrBD.isEmpty()) {
 			return usuarioRepository.save(transportista);
@@ -63,13 +66,14 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Override
 	public Transportista actualizarTransportista(Transportista transportista){
 		Optional<Usuario> usrBD=usuarioRepository.findById(transportista.getId());
-		if(usrBD.isPresent()) {
+		if(usrBD.isPresent() && transportista.getRol()=="TRANSPORTISTA") {
 			return usuarioRepository.save(transportista);
 		}
 		return transportista;
 	}
 	@Override
 	public Auditor crearAuditor(Auditor auditor){
+		auditor.setRol("AUDITOR");
 		Optional <Usuario> usrBD=usuarioRepository.findById(auditor.getId());
 		if(usrBD.isEmpty()) {
 			return usuarioRepository.save(auditor);
@@ -79,7 +83,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Override
 	public Auditor actualizarAuditor(Auditor auditor){
 		Optional <Usuario> usrBD=usuarioRepository.findById(auditor.getId());
-		if(usrBD.isPresent()) {
+		if(usrBD.isPresent() && auditor.getRol()=="AUDITOR") {
 			return usuarioRepository.save(auditor);
 		}
 		return null;

@@ -9,7 +9,6 @@ import javax.persistence.Id;
 @Entity
 public class itemFacturable {
 	@Id
-	//Crea una primary key en la base de datos.
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	long id;
 	String nombre;

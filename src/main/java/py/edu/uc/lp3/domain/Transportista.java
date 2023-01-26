@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 public class Transportista extends Usuario {
 	public Transportista() {
 		super();
-		this.rol="TRANSPORTISTA";
 	}
 	String contratante;
 	int idAlmacen;
