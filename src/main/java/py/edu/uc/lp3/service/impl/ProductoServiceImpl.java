@@ -55,6 +55,7 @@ public class ProductoServiceImpl implements ProductoService {
 	@Override
 	public ArrayList<Producto> generarPresupuesto(long almacenamientoId) {
 		ArrayList<Producto> listaItems = listarProductosPorId(almacenamientoId);
+		
 		/*
 		 * PrecioProducto+HonorarioDespachante+ImpuestoG
 		 */
