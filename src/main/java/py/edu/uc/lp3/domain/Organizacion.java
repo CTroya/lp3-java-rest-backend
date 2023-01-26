@@ -12,23 +12,6 @@ public class Organizacion {
 	String tipo;
 	String ubicacion;
 	String telefono;
-	protected Organizacion() {
-		
-	}
-	public Organizacion(Long id, String nombre, String tipo, String ubicacion, String telefono) {
-		this.id = id;
-		this.nombre = nombre;
-		this.tipo = tipo;
-		this.ubicacion = ubicacion;
-		this.telefono = telefono;
-	}
-	
-	public Organizacion(String nombre, String tipo, String ubicacion, String telefono) {
-		this.nombre = nombre;
-		this.tipo = tipo;
-		this.ubicacion = ubicacion;
-		this.telefono = telefono;
-	}
 	public Long getId() {
 		return id;
 	}

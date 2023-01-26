@@ -9,7 +9,6 @@ public class Transportista extends Usuario {
 		this.rol="TRANSPORTISTA";
 	}
 	String contratante;
-	String ubicacion;
 	int idAlmacen;
 	int idTransporte;
 	public String getContratante() {
@@ -17,12 +16,6 @@ public class Transportista extends Usuario {
 	}
 	public void setContratante(String contratante) {
 		this.contratante = contratante;
-	}
-	public String getUbicacion() {
-		return ubicacion;
-	}
-	public void setUbicacion(String ubicacion) {
-		this.ubicacion = ubicacion;
 	}
 	public int getIdAlmacen() {
 		return idAlmacen;

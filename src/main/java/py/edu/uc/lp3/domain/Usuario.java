@@ -15,7 +15,6 @@ public class Usuario {
 	String hash;
 	int idOrganizacion;
 	String rol;
-	
 	public long getId() {
 		return id;
 	}
