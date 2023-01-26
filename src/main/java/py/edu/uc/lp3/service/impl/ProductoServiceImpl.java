@@ -1,6 +1,7 @@
 package py.edu.uc.lp3.service.impl;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,5 +38,18 @@ public class ProductoServiceImpl implements ProductoService {
 	@Override
 	public ArrayList<Producto> listarProductos() {
 		return (ArrayList<Producto>)productoRepository.findAll();
+	}
+	@Override
+	public ArrayList<Producto> listarProductosPorId(long Id){
+		ArrayList<Producto> bruh = (ArrayList<Producto>)productoRepository.findAll();
+		System.out.println(bruh);
+		for(Iterator<Producto> iter = bruh.iterator();iter.hasNext();){
+			Producto xd = iter.next();
+			if(xd.getAlmacenamientoId() != Id){
+				System.out.println(Id);
+				iter.remove();
+			}
+		}
+		return bruh;
 	}
 }

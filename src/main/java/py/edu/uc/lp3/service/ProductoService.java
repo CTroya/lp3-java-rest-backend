@@ -9,4 +9,5 @@ public interface ProductoService {
 	public Producto actualizarProducto(Producto producto);
 	public void eliminarProducto(Long Id);
 	public ArrayList<Producto> listarProductos();
+	public ArrayList<Producto> listarProductosPorId(long Id);
 }

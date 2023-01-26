@@ -27,6 +27,10 @@ public class ProductoController {
     public ArrayList<Producto> findAll() {
         return productoService.listarProductos();
     }
+    @RequestMapping(method=RequestMethod.GET,value="/{Id}")
+    public ArrayList<Producto> findById(@PathVariable long Id){
+        return productoService.listarProductosPorId(Id);
+    }
 	@RequestMapping(method=RequestMethod.PUT)
     public Producto update(@RequestBody Producto producto) {
         return productoService.actualizarProducto(producto);

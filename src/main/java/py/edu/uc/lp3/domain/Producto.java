@@ -7,6 +7,13 @@ public class Producto extends itemFacturable{
 	int cantidad;
 	String procedencia;
 	float peso;
+	long almacenamientoId;
+	public long getAlmacenamientoId(){
+		return almacenamientoId;
+	}
+	public void setAlmacenamientoId(long nuevoAlmacenamientoId){
+		almacenamientoId = nuevoAlmacenamientoId;
+	}
 	public int getCantidad() {
 		return cantidad;
 	}
