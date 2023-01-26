@@ -58,6 +58,6 @@ public class ProductoServiceImpl implements ProductoService {
 		/*
 		 * PrecioProducto+HonorarioDespachante+ImpuestoG
 		 */
-		return null;
+		return listaItems;
 	}
 }
