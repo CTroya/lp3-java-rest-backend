@@ -8,6 +8,13 @@ public class Producto extends itemFacturable{
 	String procedencia;
 	float peso;
 	long almacenamientoId;
+	float flete;
+	public float getFlete() {
+		return flete;
+	}
+	public void setFlete(float flete) {
+		this.flete = flete;
+	}
 	public long getAlmacenamientoId(){
 		return almacenamientoId;
 	}

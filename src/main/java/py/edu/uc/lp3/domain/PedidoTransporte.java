@@ -15,17 +15,6 @@ public class PedidoTransporte {
     String origen;
     String destino;
     String estado;
-	public PedidoTransporte() {
-	}
-	public PedidoTransporte(long id, long transportistaId, long almacenamientoId, String origen, String destino,
-			String estado) {
-		this.id = id;
-		this.transportistaId = transportistaId;
-		this.almacenamientoId = almacenamientoId;
-		this.origen = origen;
-		this.destino = destino;
-		this.estado = estado;
-	}
 	public long getId() {
 		return id;
 	}

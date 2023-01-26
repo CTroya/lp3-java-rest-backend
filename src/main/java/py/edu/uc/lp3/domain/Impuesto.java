@@ -12,31 +12,6 @@ public class Impuesto {
 	long id;
 	String tipo;
 	float porcentaje;
-	float flete;
-	public Impuesto() {
-		super();
-	}
-	
-	public Impuesto(long id, String tipo, float porcentaje, float flete) {
-		super();
-		this.id = id;
-		this.tipo = tipo;
-		this.porcentaje = porcentaje;
-		this.flete = flete;
-	}
-	
-	public Impuesto(String tipo, float porcentaje, float flete) {
-		super();
-		this.tipo = tipo;
-		this.porcentaje = porcentaje;
-		this.flete = flete;
-	}
-	public float getFlete() {
-		return flete;
-	}
-	public void setFlete(float flete) {
-		this.flete = flete;
-	}
 	public long getId() {
 		return id;
 	}
