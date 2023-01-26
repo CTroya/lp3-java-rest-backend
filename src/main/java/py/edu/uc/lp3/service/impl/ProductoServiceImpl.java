@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import py.edu.uc.lp3.domain.Presupuesto;
 import py.edu.uc.lp3.domain.Producto;
 import py.edu.uc.lp3.repository.ProductoRepository;
 import py.edu.uc.lp3.service.ProductoService;
@@ -53,12 +54,18 @@ public class ProductoServiceImpl implements ProductoService {
 		return bruh;
 	}
 	@Override
-	public ArrayList<Producto> generarPresupuesto(long almacenamientoId) {
+	public Presupuesto generarPresupuesto(long almacenamientoId) {
 		ArrayList<Producto> listaItems = listarProductosPorId(almacenamientoId);
-		
+		for(Iterator<Producto> iter = listaItems.iterator();iter.hasNext();){
+			Producto producto = iter.next();
+			System.out.println(producto.getNombre());
+			System.out.println(producto.getIdImpuestos());
+		}
+		Presupuesto presuCalculado;
 		/*
 		 * PrecioProducto+HonorarioDespachante+ImpuestoG
 		 */
-		return listaItems;
+		//return presuCalculado;
+		return null;
 	}
 }

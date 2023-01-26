@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Presupuesto {
     Double total;
-    
+    Double totalImpuesto;
+    Double totalCosto;
     ArrayList<Producto> listItems;
+    
 }

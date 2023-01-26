@@ -1,5 +1,7 @@
 package py.edu.uc.lp3.domain;
 
+import java.util.ArrayList;
+
 import javax.persistence.Entity;
 
 @Entity
@@ -9,6 +11,13 @@ public class Producto extends itemFacturable{
 	float peso;
 	long almacenamientoId;
 	float flete;
+	ArrayList<Long> idImpuestos= new ArrayList<Long>();
+	public void setIdImpuestos(ArrayList<Long> ids){
+		idImpuestos = ids;
+	}
+	public ArrayList<Long> getIdImpuestos(){
+		return idImpuestos;
+	}
 	public float getFlete() {
 		return flete;
 	}

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import py.edu.uc.lp3.constants.ApiPaths;
+import py.edu.uc.lp3.domain.Presupuesto;
 import py.edu.uc.lp3.domain.Producto;
 import py.edu.uc.lp3.service.ProductoService;
 
@@ -20,7 +21,7 @@ public class ProductoController {
     @Autowired
 	private ProductoService productoService;
     @RequestMapping(method=RequestMethod.GET,value="/generarPresupuesto/{listaProductosId}")
-    public ArrayList<Producto> generarPresupuesto(@PathVariable(name = "listaProductosId") long listaProductosId){
+    public Presupuesto generarPresupuesto(@PathVariable(name = "listaProductosId") long listaProductosId){
         return productoService.generarPresupuesto(listaProductosId);
     }
 	@RequestMapping(method=RequestMethod.POST)
