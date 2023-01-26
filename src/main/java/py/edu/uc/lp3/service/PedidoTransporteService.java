@@ -9,4 +9,5 @@ public interface PedidoTransporteService {
 	public PedidoTransporte actualizarPedidoTransporte(PedidoTransporte pedidoTransporte);
 	public void eliminarPedidoTransporte(Long Id);
 	public ArrayList<PedidoTransporte> listarPedidoTransporte();
+	public ArrayList<PedidoTransporte> listarPorTransportista(long transportistaId);
 }

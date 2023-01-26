@@ -34,4 +34,8 @@ public class PedidoTransporteController{
     public void delete(@PathVariable Long organizacionId){
 		pedidoTransporteService.eliminarPedidoTransporte(organizacionId);
     }
+    @RequestMapping(value="/{transportistaId}",method=RequestMethod.GET)
+    public ArrayList<PedidoTransporte> findById(@PathVariable Long transportistaId){
+        return pedidoTransporteService.listarPorTransportista(transportistaId);
+    }
 }

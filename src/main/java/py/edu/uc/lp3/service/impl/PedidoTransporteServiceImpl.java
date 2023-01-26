@@ -1,6 +1,7 @@
 package py.edu.uc.lp3.service.impl;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,17 @@ public class PedidoTransporteServiceImpl implements PedidoTransporteService {
 	@Override
 	public ArrayList<PedidoTransporte> listarPedidoTransporte() {
 		return (ArrayList<PedidoTransporte>)pedidoTransporteRepository.findAll();
+	}
+	@Override
+	public ArrayList<PedidoTransporte> listarPorTransportista(long transportistaId) {
+		ArrayList<PedidoTransporte> listaTransportes = (ArrayList<PedidoTransporte>)pedidoTransporteRepository.findAll();
+		for(Iterator<PedidoTransporte> it = listaTransportes.iterator();it.hasNext();){
+			PedidoTransporte pedido = it.next();
+			if(pedido.getTransportistaId()!=transportistaId){
+				it.remove();
+			}
+		}
+		return listaTransportes;
 	}
 
 }
