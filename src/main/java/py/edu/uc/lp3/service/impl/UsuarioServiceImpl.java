@@ -96,5 +96,8 @@ public class UsuarioServiceImpl implements UsuarioService {
 	public ArrayList<Usuario> listarUsuarios(){
 		return (ArrayList<Usuario>)usuarioRepository.findAll();
 	}
-	
+	@Override
+	public ArrayList<Usuario> listarUsuariosPorRol(String Rol){
+		return (ArrayList<Usuario>)usuarioRepository.findByRol(Rol);
+	}
 }

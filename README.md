@@ -12,7 +12,14 @@ En la URL del insomnia se debe colocar htpp://localhost:8080/{nuevo request}.
 #### Ver usuarios
 Visualiza todos los usuarios cargados en la base de datos. 
 Es un request de tipo GET, con URL: htpp://localhost:8080/usuario
-
+#### Ver usuarios por Rol
+Visualiza todos los usuarios del rol especificado en el link, que estan cargados en la base de datos. 
+Es un request de tipo GET, con URL: htpp://localhost:8080/usuario/rol_usuario
+##### Roles
++ ADMINISTRADOR
++ DESPACHANTE
++ AUDITOR
++ TRANSPORTISTA
 #### Agregar Despachante
 Es un request de tipo POST, con URL: htpp://localhost:8080/usuario/despachante.  Se debe introducir el siguiente formato JSON para crear el despachante.
 ```json
