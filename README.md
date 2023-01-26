@@ -15,7 +15,7 @@ Es un request de tipo GET, con URL: htpp://localhost:8080/usuario
 #### Ver usuarios por Rol
 Visualiza todos los usuarios del rol especificado en el link, que estan cargados en la base de datos. 
 Es un request de tipo GET, con URL: htpp://localhost:8080/usuario/rol_usuario
-#####Roles
+##### Roles
 + ADMINISTRADOR
 + DESPACHANTE
 + AUDITOR
