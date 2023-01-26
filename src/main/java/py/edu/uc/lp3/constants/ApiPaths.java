@@ -6,4 +6,5 @@ public class ApiPaths {
 	public static final String IMPUESTO ="/impuesto";
 	public static final String PRODUCTO = "/producto";
 	public static final String DESPACHANTE = "/despachante";
+	public static final String PEDIDOTRANSPORTE = "/pedidotransporte";
 }
