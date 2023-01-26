@@ -17,6 +17,12 @@ import py.edu.uc.lp3.service.ProductoService;
 @RestController
 @RequestMapping(ApiPaths.PRODUCTO)
 public class ProductoController {
+    @Autowired
+    @RequestMapping(method=RequestMethod.GET,value="{listaProductosId}")
+    public ArrayList<Producto> generarPresupuesto(@PathVariable long listaProductosId){
+
+        return null;
+    }
 	@Autowired
 	private ProductoService productoService;
 	@RequestMapping(method=RequestMethod.POST)
