@@ -21,7 +21,7 @@ public class ProductoController {
 	private ProductoService productoService;
     @RequestMapping(method=RequestMethod.GET,value="/generarPresupuesto/{listaProductosId}")
     public ArrayList<Producto> generarPresupuesto(@PathVariable(name = "listaProductosId") long listaProductosId){
-        return null;
+        return productoService.generarPresupuesto(listaProductosId);
     }
 	@RequestMapping(method=RequestMethod.POST)
     public Producto save(@RequestBody Producto producto) {
@@ -36,7 +36,7 @@ public class ProductoController {
         return productoService.listarProductosPorId(Id);
     }
 	@RequestMapping(method=RequestMethod.PUT)
-    public Producto update(@RequestBody Producto producto) {
+    public Producto update(@RequestBody Producto producto){
         return productoService.actualizarProducto(producto);
     }
 	@RequestMapping(value="/{productoId}",method=RequestMethod.DELETE)
