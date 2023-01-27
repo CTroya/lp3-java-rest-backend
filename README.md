@@ -258,5 +258,4 @@ El request nos retorna los siguiente:
 	"listItems": ["En esta lista se encuentran los productos del presupuesto"
 	]
 }
-}
 ```
