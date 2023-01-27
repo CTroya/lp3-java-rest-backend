@@ -12,7 +12,6 @@ import py.edu.uc.lp3.domain.Presupuesto;
 import py.edu.uc.lp3.domain.Producto;
 import py.edu.uc.lp3.repository.ImpuestoRepository;
 import py.edu.uc.lp3.repository.ProductoRepository;
-import py.edu.uc.lp3.rest.controller.ProductoController;
 import py.edu.uc.lp3.service.ProductoService;
 
 @Service
@@ -47,16 +46,15 @@ public class ProductoServiceImpl implements ProductoService {
 	}
 	@Override
 	public ArrayList<Producto> listarProductosPorId(long Id){
-		ArrayList<Producto> bruh = (ArrayList<Producto>)productoRepository.findAll();
-		System.out.println(bruh);
-		for(Iterator<Producto> iter = bruh.iterator();iter.hasNext();){
-			Producto xd = iter.next();
-			if(xd.getAlmacenamientoId() != Id){
+		ArrayList<Producto> listaProducto = (ArrayList<Producto>)productoRepository.findAll();
+		for(Iterator<Producto> iter = listaProducto.iterator();iter.hasNext();){
+			Producto productoIt = iter.next();
+			if(productoIt.getAlmacenamientoId() != Id){
 				System.out.println(Id);
 				iter.remove();
 			}
 		}
-		return bruh;
+		return listaProducto;
 	}
 	@Override
 	public Presupuesto generarPresupuesto(long almacenamientoId) {
@@ -81,9 +79,6 @@ public class ProductoServiceImpl implements ProductoService {
 			}
 			presuCalc.setTotal(presuCalc.getTotalCosto()+presuCalc.getTotalFlete()+presuCalc.getTotalImpuesto());
 		}
-		/*
-		 * PrecioProducto+HonorarioDespachante+ImpuestoG
-		 */
 		return presuCalc;
 	}
 }

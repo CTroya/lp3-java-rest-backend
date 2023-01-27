@@ -30,7 +30,7 @@ public class PedidoTransporteController{
     public PedidoTransporte update(@RequestBody PedidoTransporte pedidoTransporte) {
         return pedidoTransporteService.actualizarPedidoTransporte(pedidoTransporte);
     }
-	@RequestMapping(value="/{pedidoTransporteId}",method=RequestMethod.DELETE)
+	@RequestMapping(value="/{organizacionId}",method=RequestMethod.DELETE)
     public void delete(@PathVariable Long organizacionId){
 		pedidoTransporteService.eliminarPedidoTransporte(organizacionId);
     }

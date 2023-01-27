@@ -48,7 +48,6 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Override
 	public Despachante actualizarDespachante(Despachante despachante){
 		Optional <Usuario> usrBD=usuarioRepository.findById(despachante.getId());
-		System.out.print(despachante.getId());
 		if(usrBD.isPresent() && despachante.getRol()=="DESPACHANTE") {
 			return usuarioRepository.save(despachante);
 		}
