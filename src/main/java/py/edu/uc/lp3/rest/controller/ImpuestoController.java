@@ -2,12 +2,7 @@ package py.edu.uc.lp3.rest.controller;
 
 import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
 import py.edu.uc.lp3.constants.ApiPaths;
 import py.edu.uc.lp3.domain.Impuesto;
 import py.edu.uc.lp3.service.ImpuestoService;
@@ -17,7 +12,7 @@ import py.edu.uc.lp3.service.ImpuestoService;
 public class ImpuestoController {
 	@Autowired
 	private ImpuestoService impuestoService;
-	@RequestMapping(method=RequestMethod.POST)
+	@PostMapping
     public Impuesto save(@RequestBody Impuesto impuesto) {
         return impuestoService.crearImpuesto(impuesto);
     }

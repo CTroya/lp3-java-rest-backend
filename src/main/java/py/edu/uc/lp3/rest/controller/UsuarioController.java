@@ -16,7 +16,7 @@ import py.edu.uc.lp3.service.UsuarioService;
 public class UsuarioController {
 	@Autowired
 	private UsuarioService usuarioService;
-	@RequestMapping(method=RequestMethod.POST,path="/usuario/administrador")
+	@PostMapping("/usuario/administrador")
     public Administrador save(@RequestBody Administrador administrador) {
         return usuarioService.crearAdministrador(administrador);
     }

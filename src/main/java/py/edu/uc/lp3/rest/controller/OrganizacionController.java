@@ -16,21 +16,21 @@ public class OrganizacionController {
 	/*
 	 * Llama a la funcion para crear una organizacion.
 	 * */
-	@RequestMapping(method=RequestMethod.POST)
+	@PostMapping
     public Organizacion save(@RequestBody Organizacion organizacion) {
         return organizacionService.crearOrganizacion(organizacion);
     }
 	/*
 	 * Llama a la funcion para desplegar una lista de organizaciones.
 	 * */
-	@RequestMapping(method=RequestMethod.GET)
+	@GetMapping
     public ArrayList<Organizacion> findAll() {
         return organizacionService.listarOrganizaciones();
     }
 	/*
 	 *Llama a la funcion para desplegar una lista de organizaciones por tipo.
 	 * */
-	@RequestMapping(value="/{organizacionTipo}" ,method=RequestMethod.GET)
+	@GetMapping("/{organizacionTipo}")
     public ArrayList<Organizacion> findByTipo(@PathVariable String organizacionTipo) {
         return organizacionService.listarPorTipo(organizacionTipo);
     }

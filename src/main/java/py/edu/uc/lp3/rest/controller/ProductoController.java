@@ -3,12 +3,7 @@ package py.edu.uc.lp3.rest.controller;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
 import py.edu.uc.lp3.constants.ApiPaths;
 import py.edu.uc.lp3.domain.Presupuesto;
 import py.edu.uc.lp3.domain.Producto;
@@ -24,7 +19,7 @@ public class ProductoController {
     public Presupuesto generarPresupuesto(@PathVariable(name = "listaProductosId") long listaProductosId){
         return productoService.generarPresupuesto(listaProductosId);
     }
-	@RequestMapping(method=RequestMethod.POST)
+	@PostMapping
     public Producto save(@RequestBody Producto producto) {
         return productoService.crearProducto(producto);
     }
