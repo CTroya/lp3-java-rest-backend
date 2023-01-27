@@ -80,7 +80,6 @@ public class ProductoServiceImpl implements ProductoService {
 				}
 			}
 			presuCalc.setTotal(presuCalc.getTotalCosto()+presuCalc.getTotalFlete()+presuCalc.getTotalImpuesto());
-			
 		}
 		/*
 		 * PrecioProducto+HonorarioDespachante+ImpuestoG
