@@ -8,7 +8,7 @@ El proyecto consiste en realziar un sistema backend con servicios REST, esta ins
 En la URL del insomnia se debe colocar htpp://localhost:8080/{nuevo request}.
 ## Funcionamiento del programa
 Se puede descargar el archivo de nombre Insomnia.JSON para tener un ejemplo de los request.      
-Al ejecutar ApplicationJava como Spring Boot App se crea la base de datos.     
+Al ejecutar Application.java como Spring Boot App se crea la base de datos.     
 Se recomienda agregar todos los datos primero de los respectivos CRUD.   
   
 ## CRUDS 
