@@ -202,3 +202,42 @@ Es un request tipo de PUT, con URL: htpp://localhost:8080/pedidoTransporte. Se d
 ```
 #### Eliminar pedido de transporte por id
 Es un request de tipo DELETE, con URL: htpp://localhost:8080/pedidoTransporte
+### Producto
+#### Ver productos
+Visualiza todos los productos cargados en la base de datos.
+Es un request tipo de GET, con URL: htpp://localhost:8080/producto
+#### Ver productos por Almacenamiento
+Visualiza todos los productos que estan en un determinado almacenamiento, cargados en la base de datos.
+Es un request tipo de GET, con URL: htpp://localhost:8080/producto/id_almacenamiento
+#### Agregar producto
+Es un request tipo de POST, con URL: htpp://localhost:8080/producto. Se debe introducir el siguiente formato JSON para agregar el producto.
+```json
+{
+	"id":"Identificador del producto",
+	"nombre":"Nombre del producto",
+	"tipo":"Tipo de producto",
+	"descripcion":"Descripcion de producto",
+	"precio":"Precio del producto",
+	"cantidad": "Cantidad de productos",
+	"procedencia":"Pais de procedencia del producto",
+	"peso":"Peso del producto",
+	"flete":"Costo flete del producto"
+}
+```
+#### Actualizar producto
+Es un request tipo de PUT, con URL: htpp://localhost:8080/producto. Se debe introducir el siguiente formato JSON para actualizar el producto.
+```json
+{
+	"id":"Identificador del producto que se desea actualizar",
+	"nombre":"Nombre del producto",
+	"tipo":"Tipo de producto",
+	"descripcion":"Descripcion de producto",
+	"precio":"Precio del producto",
+	"cantidad": "Cantidad de productos",
+	"procedencia":"Pais de procedencia del producto",
+	"peso":"Peso del producto",
+	"flete":"Costo flete del producto"
+}
+```
+#### Eliminar producto
+Es un request de tipo DELETE, con URL: htpp://localhost:8080/producto
