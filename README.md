@@ -180,9 +180,9 @@ Es un request tipo de GET, con URL: htpp://localhost:8080/pedidoTransporte
 Es un request tipo de POST, con URL: htpp://localhost:8080/pedidoTransporte. Se debe introducir el siguiente formato JSON para agregar el pedido de transporte .
 ```json
 {
-    "id": "Identificador del pedido de Transporte"
+   	"id":"Identificador del pedido de Transporte"
 	"transportistaId":"Identificador del transportista",
-	"almadenamientoId":"Identificador del almacenamiento
+	"almadenamientoId":"Identificador del almacenamiento",
 	"origen":"Pais de origen que se desea transportar los productos",
 	"destino":"Pais destino que se desea transportar los productos",
 	"estado":"Estado del pedido"
@@ -192,9 +192,9 @@ Es un request tipo de POST, con URL: htpp://localhost:8080/pedidoTransporte. Se 
 Es un request tipo de PUT, con URL: htpp://localhost:8080/pedidoTransporte. Se debe introducir el siguiente formato JSON para actualizar el pedido de transporte.
 ```json
 {
-    "id": "Identificador del pedido de Transporte a actualizar",
+   	"id":"Identificador del pedido de Transporte a actualizar",
 	"transportistaId":"Identificador del transportista",
-	"almadenamientoId":"Identificador del almacenamiento
+	"almadenamientoId":"Identificador del almacenamiento",
 	"origen":"Pais de origen que se desea transportar los productos",
 	"destino":"Pais destino que se desea transportar los productos",
 	"estado":"Estado del pedido"
