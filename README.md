@@ -108,7 +108,7 @@ Es un request de tipo PUT, con URL: htpp://localhost:8080/usuario/transportista.
 	"idTransporte":"Identificador del transporte que pertenece al transportista"
 }
 ```
-#### Actualiar Administrador
+#### Actualizar Administrador
 Es un request de tipo PUT, con URL: htpp://localhost:8080/usuario/administrador.  Se debe introducir el siguiente formato JSON para actualizar el administrador.
 ```json
 {
