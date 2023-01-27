@@ -233,7 +233,9 @@ Es un request tipo de POST, con URL: htpp://localhost:8080/producto. Se debe int
 	"cantidad": "Cantidad de productos",
 	"procedencia":"Pais de procedencia del producto",
 	"peso":"Peso del producto",
-	"flete":"Costo flete del producto"
+	"flete":"Costo flete del producto",
+	"almacenamientoId":"Identificador del almacenamiento",
+	"idImpuestos":"Identificadores de impuesto"
 }
 ```
 #### Actualizar producto
@@ -248,7 +250,9 @@ Es un request tipo de PUT, con URL: http://localhost:8080/producto. Se debe intr
 	"cantidad": "Cantidad de productos",
 	"procedencia":"Pais de procedencia del producto",
 	"peso":"Peso del producto",
-	"flete":"Costo flete del producto"
+	"flete":"Costo flete del producto",
+	"almacenamientoId":"Identificador del almacenamiento",
+	"idImpuestos":"Identificadores de impuesto"
 }
 ```
 #### Eliminar producto
