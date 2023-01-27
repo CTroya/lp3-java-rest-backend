@@ -1,5 +1,5 @@
 # TP-LP3-S2-2022
-El proyecto consiste en realziar un sistema backend con servicios REST.
+El proyecto consiste en realziar un sistema backend con servicios REST, esta inspirado en el trabajo https://github.com/alefq/lp3-template-tp 
 ### Integrantes
 + Carlos Troya
 + Daniela Cristaldo
@@ -7,6 +7,8 @@ El proyecto consiste en realziar un sistema backend con servicios REST.
 ## URL principal
 En la URL del insomnia se debe colocar htpp://localhost:8080/{nuevo request}.
 ## Funcionamiento del programa
+Se puede descargar el archivo de nombre Insomnia.JSON para tener un ejemplo de los request.
+Se recomienda agregar todos los datos primero de los respectivos CRUD.
 ## CRUDS 
 ### Usuarios
 #### Ver usuarios
