@@ -9,6 +9,9 @@ import py.edu.uc.lp3.domain.Organizacion;
 
 //@Repository
 public interface OrganizacionRepository extends CrudRepository<Organizacion,Long>{
-	ArrayList<Organizacion> findByTipo(String tipo);
+	/*
+	 * Funcion que creamos para filtrar por tipo las organizaciones.
+	 * */
+	ArrayList<Organizacion> findByTipo(String tipo); 
 }
 

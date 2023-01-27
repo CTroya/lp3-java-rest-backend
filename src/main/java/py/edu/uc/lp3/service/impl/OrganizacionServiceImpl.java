@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import py.edu.uc.lp3.domain.Organizacion;
+import py.edu.uc.lp3.exceptions.GeneralExceptions;
 import py.edu.uc.lp3.repository.OrganizacionRepository;
 import py.edu.uc.lp3.service.OrganizacionService;
 
@@ -32,7 +33,17 @@ public class OrganizacionServiceImpl implements OrganizacionService {
 		
 	}
 	@Override
+	public Optional<Organizacion> encontrarOrganizacionPorId(Long id) {
+		Optional<Organizacion> orgBD=organizacionRepository.findById(id);
+		return orgBD;
+	}
+	@Override
 	public void eliminarOrganizacion(Long id) {
+		Optional<Organizacion> orgBD=encontrarOrganizacionPorId(id);
+		if(orgBD.isEmpty()) {
+			GeneralExceptions generalExceptions = new GeneralExceptions("No existe la organizacion con id: " + id);
+			throw generalExceptions;
+		}
 		organizacionRepository.deleteById(id);
 	}
 	@Override
@@ -43,5 +54,6 @@ public class OrganizacionServiceImpl implements OrganizacionService {
 	public ArrayList<Organizacion> listarPorTipo(String tipo) {
 		return (ArrayList<Organizacion>)organizacionRepository.findByTipo(tipo);
 	}
+	
 	
 }

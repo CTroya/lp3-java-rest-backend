@@ -1,5 +1,5 @@
 # TP-LP3-S2-2022
-El proyecto consiste en realziar un sistema backend con servicios REST.
+El proyecto consiste en realziar un sistema backend con servicios REST, esta inspirado en el trabajo https://github.com/alefq/lp3-template-tp 
 ### Integrantes
 + Carlos Troya
 + Daniela Cristaldo
@@ -7,6 +7,10 @@ El proyecto consiste en realziar un sistema backend con servicios REST.
 ## URL principal
 En la URL del insomnia se debe colocar htpp://localhost:8080/{nuevo request}.
 ## Funcionamiento del programa
+Se puede descargar el archivo de nombre Insomnia.JSON para tener un ejemplo de los request.      
+Al ejecutar Application.java como Spring Boot App se crea la base de datos.     
+Se recomienda agregar todos los datos primero de los respectivos CRUD.   
+  
 ## CRUDS 
 ### Usuarios
 #### Ver usuarios
@@ -172,3 +176,72 @@ Es un request de tipo PUT, con URL: htpp://localhost:8080/impuesto. Se debe intr
 ```
 #### Eliminar impuesto por id
 Es un request de tipo DELETE, con URL: htpp://localhost:8080/impuesto
+### Pedido Transporte
+#### Ver pedidos de transporte
+Visualiza todos los pedidos de transporte cargados en la base de datos.
+Es un request tipo de GET, con URL: htpp://localhost:8080/pedidoTransporte
+#### Agregar pedido de transporte
+Es un request tipo de POST, con URL: htpp://localhost:8080/pedidoTransporte. Se debe introducir el siguiente formato JSON para agregar el pedido de transporte .
+```json
+{
+   	"id":"Identificador del pedido de Transporte"
+	"transportistaId":"Identificador del transportista",
+	"almadenamientoId":"Identificador del almacenamiento",
+	"origen":"Pais de origen que se desea transportar los productos",
+	"destino":"Pais destino que se desea transportar los productos",
+	"estado":"Estado del pedido"
+}
+```
+#### Actualizar pedido de transporte
+Es un request tipo de PUT, con URL: htpp://localhost:8080/pedidoTransporte. Se debe introducir el siguiente formato JSON para actualizar el pedido de transporte.
+```json
+{
+   	"id":"Identificador del pedido de Transporte a actualizar",
+	"transportistaId":"Identificador del transportista",
+	"almadenamientoId":"Identificador del almacenamiento",
+	"origen":"Pais de origen que se desea transportar los productos",
+	"destino":"Pais destino que se desea transportar los productos",
+	"estado":"Estado del pedido"
+}
+```
+#### Eliminar pedido de transporte por id
+Es un request de tipo DELETE, con URL: htpp://localhost:8080/pedidoTransporte
+### Producto
+#### Ver productos
+Visualiza todos los productos cargados en la base de datos.
+Es un request tipo de GET, con URL: htpp://localhost:8080/producto
+#### Ver productos por Almacenamiento
+Visualiza todos los productos que estan en un determinado almacenamiento, cargados en la base de datos.
+Es un request tipo de GET, con URL: htpp://localhost:8080/producto/id_almacenamiento
+#### Agregar producto
+Es un request tipo de POST, con URL: htpp://localhost:8080/producto. Se debe introducir el siguiente formato JSON para agregar el producto.
+```json
+{
+	"id":"Identificador del producto",
+	"nombre":"Nombre del producto",
+	"tipo":"Tipo de producto",
+	"descripcion":"Descripcion de producto",
+	"precio":"Precio del producto",
+	"cantidad": "Cantidad de productos",
+	"procedencia":"Pais de procedencia del producto",
+	"peso":"Peso del producto",
+	"flete":"Costo flete del producto"
+}
+```
+#### Actualizar producto
+Es un request tipo de PUT, con URL: htpp://localhost:8080/producto. Se debe introducir el siguiente formato JSON para actualizar el producto.
+```json
+{
+	"id":"Identificador del producto que se desea actualizar",
+	"nombre":"Nombre del producto",
+	"tipo":"Tipo de producto",
+	"descripcion":"Descripcion de producto",
+	"precio":"Precio del producto",
+	"cantidad": "Cantidad de productos",
+	"procedencia":"Pais de procedencia del producto",
+	"peso":"Peso del producto",
+	"flete":"Costo flete del producto"
+}
+```
+#### Eliminar producto
+Es un request de tipo DELETE, con URL: htpp://localhost:8080/producto
