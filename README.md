@@ -172,3 +172,33 @@ Es un request de tipo PUT, con URL: htpp://localhost:8080/impuesto. Se debe intr
 ```
 #### Eliminar impuesto por id
 Es un request de tipo DELETE, con URL: htpp://localhost:8080/impuesto
+### Pedido Transporte
+#### Ver pedidos de transporte
+Visualiza todos los pedidos de transporte cargados en la base de datos.
+Es un request tipo de GET, con URL: htpp://localhost:8080/pedidoTransporte
+#### Agregar pedido de transporte
+Es un request tipo de POST, con URL: htpp://localhost:8080/pedidoTransporte. Se debe introducir el siguiente formato JSON para agregar el pedido de transporte .
+```json
+{
+    "id": "Identificador del pedido de Transporte"
+	"transportistaId":"Identificador del transportista",
+	"almadenamientoId":"Identificador del almacenamiento
+	"origen":"Pais de origen que se desea transportar los productos",
+	"destino":"Pais destino que se desea transportar los productos",
+	"estado":"Estado del pedido"
+}
+```
+#### Actualizar pedido de transporte
+Es un request tipo de PUT, con URL: htpp://localhost:8080/pedidoTransporte. Se debe introducir el siguiente formato JSON para actualizar el pedido de transporte.
+```json
+{
+    "id": "Identificador del pedido de Transporte a actualizar",
+	"transportistaId":"Identificador del transportista",
+	"almadenamientoId":"Identificador del almacenamiento
+	"origen":"Pais de origen que se desea transportar los productos",
+	"destino":"Pais destino que se desea transportar los productos",
+	"estado":"Estado del pedido"
+}
+```
+#### Eliminar pedido de transporte por id
+Es un request de tipo DELETE, con URL: htpp://localhost:8080/pedidoTransporte
