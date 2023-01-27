@@ -5,7 +5,7 @@ El proyecto consiste en realizar un sistema backend con servicios REST, esta ins
 + Daniela Cristaldo
 
 ## URL principal
-En la URL del insomnia se debe colocar http://localhost:8080/{nuevo request}.
+En la URL del insomnia se debe colocar http://localhost:8080/{nuevoRequest}.
 ## Funcionamiento del programa
 Se puede descargar el archivo de nombre Insomnia.JSON para tener un ejemplo de los request.      
 Al ejecutar Application.java como Spring Boot App se crea la base de datos.     
