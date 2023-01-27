@@ -11,7 +11,7 @@ public class Producto extends itemFacturable{
 	float peso;
 	long almacenamientoId;
 	float flete;
-	ArrayList<Long> idImpuestos= new ArrayList<Long>();
+	public ArrayList<Long> idImpuestos= new ArrayList<Long>();
 	public void setIdImpuestos(ArrayList<Long> ids){
 		idImpuestos = ids;
 	}
