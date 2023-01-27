@@ -1,5 +1,5 @@
 # TP-LP3-S2-2022
-El proyecto consiste en realziar un sistema backend con servicios REST, esta inspirado en el trabajo https://github.com/alefq/lp3-template-tp 
+El proyecto consiste en realizar un sistema backend con servicios REST, esta inspirado en el trabajo https://github.com/alefq/lp3-template-tp 
 ### Integrantes
 + Carlos Troya
 + Daniela Cristaldo
