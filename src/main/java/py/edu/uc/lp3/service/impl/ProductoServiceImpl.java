@@ -60,10 +60,10 @@ public class ProductoServiceImpl implements ProductoService {
 	}
 	@Override
 	public Presupuesto generarPresupuesto(long almacenamientoId) {
-		
 		ArrayList<Impuesto> impBD = (ArrayList<Impuesto>)impuestoRepository.findAll();
 		ArrayList<Producto> listaItems = listarProductosPorId(almacenamientoId);
 		Presupuesto presuCalc = new Presupuesto();
+		presuCalc.setListItems(listaItems);
 		for(Iterator<Producto> iter = listaItems.iterator();iter.hasNext();){
 			Producto producto = iter.next();
 			presuCalc.setTotalCosto(presuCalc.getTotalCosto()+producto.getPrecio());;

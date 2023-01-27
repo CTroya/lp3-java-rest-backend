@@ -9,15 +9,13 @@ public class Presupuesto {
     Double totalImpuesto = 0.0;
     Double totalCosto = 0.0;
     Double totalFlete = 0.0;
-    ArrayList<Producto> listItems = new ArrayList<Producto>();
-
-
-    
+    ArrayList<Producto> listItems= new ArrayList<Producto>();
     public Presupuesto(){
-        total = 0.0;
-        totalImpuesto = 0.0;
-        totalCosto = 0.0;
-        totalFlete = 0.0;
+        this.total = 0.0;
+        this.totalImpuesto = 0.0;
+        this.totalCosto = 0.0;
+        this.totalFlete = 0.0;
+        this.listItems= new ArrayList<Producto>();
     }
     public Double getTotal(){
         return total;
@@ -43,4 +41,11 @@ public class Presupuesto {
     public void setTotal(Double set){
         total = set;
     }
+	public ArrayList<Producto> getListItems() {
+		return listItems;
+	}
+	public void setListItems(ArrayList<Producto> listItems) {
+		this.listItems = listItems;
+	}
+    
 }
