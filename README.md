@@ -5,7 +5,7 @@ El proyecto consiste en realizar un sistema backend con servicios REST, esta ins
 + Daniela Cristaldo
 
 ## URL principal
-En la URL del insomnia se debe colocar htpp://localhost:8080/{nuevo request}.
+En la URL del insomnia se debe colocar http://localhost:8080/{nuevo request}.
 ## Funcionamiento del programa
 Se puede descargar el archivo de nombre Insomnia.JSON para tener un ejemplo de los request.      
 Al ejecutar Application.java como Spring Boot App se crea la base de datos.     
@@ -15,17 +15,17 @@ Se recomienda agregar todos los datos primero de los respectivos CRUD.
 ### Usuarios
 #### Ver usuarios
 Visualiza todos los usuarios cargados en la base de datos. 
-Es un request de tipo GET, con URL: htpp://localhost:8080/usuario
+Es un request de tipo GET, con URL: http://localhost:8080/usuario
 #### Ver usuarios por Rol
 Visualiza todos los usuarios del rol especificado en el link, que estan cargados en la base de datos. 
-Es un request de tipo GET, con URL: htpp://localhost:8080/usuario/rol_usuario
+Es un request de tipo GET, con URL: http://localhost:8080/usuario/rol_usuario
 ##### Roles
 + ADMINISTRADOR
 + DESPACHANTE
 + AUDITOR
 + TRANSPORTISTA
 #### Agregar Despachante
-Es un request de tipo POST, con URL: htpp://localhost:8080/usuario/despachante.  Se debe introducir el siguiente formato JSON para crear el despachante.
+Es un request de tipo POST, con URL: http://localhost:8080/usuario/despachante.  Se debe introducir el siguiente formato JSON para crear el despachante.
 ```json
 {
 	"id":"Identificador del despachante.",
@@ -36,7 +36,7 @@ Es un request de tipo POST, con URL: htpp://localhost:8080/usuario/despachante. 
 }
 ```
 #### Agregar Auditor
-Es un request de tipo POST, con URL: htpp://localhost:8080/usuario/auditor.  Se debe introducir el siguiente formato JSON para crear el auditor.
+Es un request de tipo POST, con URL: http://localhost:8080/usuario/auditor.  Se debe introducir el siguiente formato JSON para crear el auditor.
 ```json
 {
 	"id":"Identificador del auditor.",
@@ -47,7 +47,7 @@ Es un request de tipo POST, con URL: htpp://localhost:8080/usuario/auditor.  Se 
 }
 ```
 ### Agregar Transportista
-Es un request de tipo POST, con URL: htpp://localhost:8080/usuario/transportista.  Se debe introducir el siguiente formato JSON para crear el transportista.
+Es un request de tipo POST, con URL: http://localhost:8080/usuario/transportista.  Se debe introducir el siguiente formato JSON para crear el transportista.
 ```json
 {
 	"id":"Identificador del transportista.",
@@ -61,7 +61,7 @@ Es un request de tipo POST, con URL: htpp://localhost:8080/usuario/transportista
 }
 ```
 #### Agregar Administrador
-Es un request de tipo POST, con URL: htpp://localhost:8080/usuario/administrador.  Se debe introducir el siguiente formato JSON para crear el administrador.
+Es un request de tipo POST, con URL: http://localhost:8080/usuario/administrador.  Se debe introducir el siguiente formato JSON para crear el administrador.
 ```json
 {
 	"id":"Identificador del administrador.",
@@ -73,7 +73,7 @@ Es un request de tipo POST, con URL: htpp://localhost:8080/usuario/administrador
 ```
 
 #### Actualizar Despachante
-Es un request de tipo PUT, con URL: htpp://localhost:8080/usuario/despachante.  Se debe introducir el siguiente formato JSON para actualizar el despachante.
+Es un request de tipo PUT, con URL: http://localhost:8080/usuario/despachante.  Se debe introducir el siguiente formato JSON para actualizar el despachante.
 ```json
 {
 	"id":"Identificador del despachante que se desea modificar.",
@@ -95,7 +95,7 @@ Es un request de tipo PUT, con URL: htpp://localhost:8080/usuario/auditor.  Se d
 }
 ```
 ### Actualizar Transportista
-Es un request de tipo PUT, con URL: htpp://localhost:8080/usuario/transportista.  Se debe introducir el siguiente formato JSON para actualizar el transportista.
+Es un request de tipo PUT, con URL: http://localhost:8080/usuario/transportista.  Se debe introducir el siguiente formato JSON para actualizar el transportista.
 ```json
 {
 	"id":"Identificador del transportista que se desea modificar.",
@@ -109,7 +109,7 @@ Es un request de tipo PUT, con URL: htpp://localhost:8080/usuario/transportista.
 }
 ```
 #### Actualizar Administrador
-Es un request de tipo PUT, con URL: htpp://localhost:8080/usuario/administrador.  Se debe introducir el siguiente formato JSON para actualizar el administrador.
+Es un request de tipo PUT, con URL: http://localhost:8080/usuario/administrador.  Se debe introducir el siguiente formato JSON para actualizar el administrador.
 ```json
 {
 	"id":"Identificador del administrador que se desea modificar.",
@@ -120,16 +120,16 @@ Es un request de tipo PUT, con URL: htpp://localhost:8080/usuario/administrador.
 }
 ```
 #### Eliminar usuario por id
-Es un request de tipo DELETE, con URL: htpp://localhost:8080/usuario/id_usuario
+Es un request de tipo DELETE, con URL: http://localhost:8080/usuario/id_usuario
 ### Organizaciones
 #### Ver organizaciones
 Visualiza todos las organizaciones cargados en la base de datos.
-Es un request de tipo GET, con URL: htpp://localhost:8080/organizacion
+Es un request de tipo GET, con URL: http://localhost:8080/organizacion
 #### Ver organizaciones por tipo
 Visualiza todos las organizaciones por tipo cargados en la base de datos.
-Es un request de tipo GET, con URL: htpp://localhost:8080/organizacion/tipo_organizacion
+Es un request de tipo GET, con URL: http://localhost:8080/organizacion/tipo_organizacion
 #### Agregar organizaciones
-Es un request de tipo POST, con URL: htpp://localhost:8080/organizacion. Se debe introducir el siguiente formato JSON para agregar la organizacion.
+Es un request de tipo POST, con URL: http://localhost:8080/organizacion. Se debe introducir el siguiente formato JSON para agregar la organizacion.
 ```json
 {
 	"id":"Identificador de la organizacion",
@@ -140,7 +140,7 @@ Es un request de tipo POST, con URL: htpp://localhost:8080/organizacion. Se debe
 }
 ```
 #### Actualizar organizaciones
-Es un request de tipo PUT, con URL: htpp://localhost:8080/organizacion. Se debe introducir el siguiente formato JSON para actualizar la organizacion.
+Es un request de tipo PUT, con URL: http://localhost:8080/organizacion. Se debe introducir el siguiente formato JSON para actualizar la organizacion.
 ```json
 {
 	"id":"Identificador de la organizacion que se desea actualizar",
@@ -151,13 +151,13 @@ Es un request de tipo PUT, con URL: htpp://localhost:8080/organizacion. Se debe 
 }
 ```
 #### Eliminar organizaciones por id
-Es un request de tipo DELETE, con URL: htpp://localhost:8080/organizacion/id_organizacion
+Es un request de tipo DELETE, con URL: http://localhost:8080/organizacion/id_organizacion
 ### Impuesto
 #### Ver impuestos
 Visualiza todos los impuesto cargados en la base de datos.
 Es un request de tipo de GET, con URL: htpp://localhost:8080/impuesto
 #### Agregar impuesto
-Es un request de tipo de POST, con URL: htpp://localhost:8080/impuesto. Se debe introducir el siguiente formato JSON para agregar el impuesto.
+Es un request de tipo de POST, con URL: http://localhost:8080/impuesto. Se debe introducir el siguiente formato JSON para agregar el impuesto.
 ```json
 {
 	"id":"Identificador del impuesto",
@@ -175,13 +175,13 @@ Es un request de tipo PUT, con URL: htpp://localhost:8080/impuesto. Se debe intr
 }
 ```
 #### Eliminar impuesto por id
-Es un request de tipo DELETE, con URL: htpp://localhost:8080/impuesto
+Es un request de tipo DELETE, con URL: http://localhost:8080/impuesto
 ### Pedido Transporte
 #### Ver pedidos de transporte
 Visualiza todos los pedidos de transporte cargados en la base de datos.
 Es un request tipo de GET, con URL: htpp://localhost:8080/pedidoTransporte
 #### Agregar pedido de transporte
-Es un request tipo de POST, con URL: htpp://localhost:8080/pedidoTransporte. Se debe introducir el siguiente formato JSON para agregar el pedido de transporte .
+Es un request tipo de POST, con URL: http://localhost:8080/pedidoTransporte. Se debe introducir el siguiente formato JSON para agregar el pedido de transporte .
 ```json
 {
    	"id":"Identificador del pedido de Transporte"
@@ -193,7 +193,7 @@ Es un request tipo de POST, con URL: htpp://localhost:8080/pedidoTransporte. Se 
 }
 ```
 #### Actualizar pedido de transporte
-Es un request tipo de PUT, con URL: htpp://localhost:8080/pedidoTransporte. Se debe introducir el siguiente formato JSON para actualizar el pedido de transporte.
+Es un request tipo de PUT, con URL: http://localhost:8080/pedidoTransporte. Se debe introducir el siguiente formato JSON para actualizar el pedido de transporte.
 ```json
 {
    	"id":"Identificador del pedido de Transporte a actualizar",
@@ -205,7 +205,7 @@ Es un request tipo de PUT, con URL: htpp://localhost:8080/pedidoTransporte. Se d
 }
 ```
 #### Eliminar pedido de transporte por id
-Es un request de tipo DELETE, con URL: htpp://localhost:8080/pedidoTransporte
+Es un request de tipo DELETE, con URL: http://localhost:8080/pedidoTransporte
 ### Producto
 #### Ver productos
 Visualiza todos los productos cargados en la base de datos.
@@ -229,7 +229,7 @@ Es un request tipo de POST, con URL: htpp://localhost:8080/producto. Se debe int
 }
 ```
 #### Actualizar producto
-Es un request tipo de PUT, con URL: htpp://localhost:8080/producto. Se debe introducir el siguiente formato JSON para actualizar el producto.
+Es un request tipo de PUT, con URL: http://localhost:8080/producto. Se debe introducir el siguiente formato JSON para actualizar el producto.
 ```json
 {
 	"id":"Identificador del producto que se desea actualizar",
@@ -244,4 +244,19 @@ Es un request tipo de PUT, con URL: htpp://localhost:8080/producto. Se debe intr
 }
 ```
 #### Eliminar producto
-Es un request de tipo DELETE, con URL: htpp://localhost:8080/producto
+Es un request de tipo DELETE, con URL: http://localhost:8080/producto
+##Generar Presupuesto
+Es un request del tipo GET, CON URL :http://localhost:8080/producto/generarPresupuesto/{almacenamientoId}.
+Siendo almacenamientoId el id del almacenamiento que contiene la lista de productos del presupuesto que deseemos calcular.
+El request nos retorna los siguiente:
+```json
+{
+	"total": "El costo total del presupuesto",
+	"totalImpuesto": "Suma del costo de los impuestos",
+	"totalCosto": "Suma del precio de todos los items",
+	"totalFlete": "La suma del flete de todos los items",
+	"listItems": ["En esta lista se encuentran los productos del presupuesto"
+	]
+}
+}
+```
