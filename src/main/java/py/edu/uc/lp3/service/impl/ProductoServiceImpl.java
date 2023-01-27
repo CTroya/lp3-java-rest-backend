@@ -50,7 +50,6 @@ public class ProductoServiceImpl implements ProductoService {
 		for(Iterator<Producto> iter = listaProducto.iterator();iter.hasNext();){
 			Producto productoIt = iter.next();
 			if(productoIt.getAlmacenamientoId() != Id){
-				System.out.println(Id);
 				iter.remove();
 			}
 		}
